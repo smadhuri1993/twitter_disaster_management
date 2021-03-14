@@ -1,8 +1,6 @@
 # Preprocessing Text Python Package
 
-#### Course Link: https://bit.ly/intro_nlp
-
-This python package is prepared by YourName.
+This python package is prepared by Simhadri Madhuri.
 
 Dependencies
 ```
@@ -56,17 +54,4 @@ df['reviews'] = df['reviews'].apply(lambda x: ps.remove_special_chars(x))
 df['reviews'] = df['reviews'].apply(lambda x: ps.remove_accented_chars(x))
 df['reviews'] = df['reviews'].apply(lambda x: ps.make_base(x)) #ran -> run, 
 df['reviews'] = df['reviews'].apply(lambda x: ps.spelling_correction(x).raw_sentences[0]) #seplling -> spelling
-```
-
-Note: Avoid to use `make_base` and `spelling_correction` for very large dataset otherwise it might take hours to process.
-
-
-#### Extra
-
-```
-x = 'lllooooovvveeee youuuu'
-x = re.sub("(.)\\1{2,}", "\\1", x)
-print(x)
----
-love you
 ```
